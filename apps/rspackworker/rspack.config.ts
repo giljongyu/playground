@@ -11,7 +11,7 @@ export default defineConfig({
   context: __dirname,
   entry: {
     main: "./src/main.tsx",
-    worker: "./src/worker.ts",
+    worker: "./src/worker/pdflib.worker.ts",
   },
   resolve: {
     extensions: ["...", ".ts", ".tsx", ".jsx"],
@@ -59,14 +59,7 @@ export default defineConfig({
     }),
     isDev ? new RefreshPlugin() : null,
   ].filter(Boolean),
-  optimization: {
-    minimizer: [
-      new rspack.SwcJsMinimizerRspackPlugin(),
-      new rspack.LightningCssMinimizerRspackPlugin({
-        minimizerOptions: { targets },
-      }),
-    ],
-  },
+
   experiments: {
     css: true,
     outputModule: true,

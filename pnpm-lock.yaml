@@ -60,6 +60,15 @@ importers:
 
   apps/rspackworker:
     dependencies:
+      '@payhereinc/pairing-foundation':
+        specifier: 0.1.0-rc.3
+        version: 0.1.0-rc.3
+      '@payhereinc/pairing-icons':
+        specifier: ^0.1.0
+        version: 0.1.0(@payhereinc/pairing-foundation@0.1.0-rc.3)(react-dom@19.1.0(react@19.1.0))(react-native-svg@12.5.0(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0))(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@payhereinc/pairing-ui':
+        specifier: 0.1.0-rc.4
+        version: 0.1.0-rc.4(@payhereinc/pairing-foundation@0.1.0-rc.3)(@payhereinc/pairing-icons@0.1.0(@payhereinc/pairing-foundation@0.1.0-rc.3)(react-dom@19.1.0(react@19.1.0))(react-native-svg@12.5.0(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0))(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)))(lottie-react-native@7.2.2(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-lottie-player@2.1.0(react@19.1.0))(react-native-gesture-handler@2.25.0(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0))(react-native-svg@12.5.0(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0))(react-native@0.79.0(@babel/core@7.26.10)(@types/react@19.0.12)(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       comlink:
         specifier: ^4.4.2
         version: 4.4.2
@@ -127,7 +136,7 @@ importers:
         version: 19.0.4(@types/react@19.0.12)
       '@vitejs/plugin-react-swc':
         specifier: ^3.8.0
-        version: 3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10))
+        version: 3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10)(terser@5.39.0))
       eslint:
         specifier: ^9.21.0
         version: 9.23.0
@@ -164,6 +173,12 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      react-simplikit:
+        specifier: ^0.0.29
+        version: 0.0.29(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      zustand:
+        specifier: ^5.0.3
+        version: 5.0.3(@types/react@19.0.12)(react@19.1.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.21.0
@@ -176,7 +191,7 @@ importers:
         version: 19.0.4(@types/react@19.0.12)
       '@vitejs/plugin-react-swc':
         specifier: ^3.8.0
-        version: 3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10))
+        version: 3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10)(terser@5.39.0))
       eslint:
         specifier: ^9.21.0
         version: 9.23.0
@@ -3681,6 +3696,12 @@ packages:
     resolution: {integrity: sha512-FPvF2XxTSikpJxcr+bHut2H4gJ17+18Uy20D5/F+SKzFap62R3cM5wH6b8WN3LyGSYeQilLEcJcR1fjBSI2S1A==}
     engines: {node: '>=0.10.0'}
 
+  react-simplikit@0.0.29:
+    resolution: {integrity: sha512-8EK+tu7YdhQXPd8Z9vMgcrfYnYr22zM5e8h36fM/nyLY7frzp2EnGZ4EPXJTccC38kB56PFkvOh0Tnt3lBWHBQ==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
@@ -4522,6 +4543,24 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  zustand@5.0.3:
+    resolution: {integrity: sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
 
 snapshots:
 
@@ -5824,7 +5863,7 @@ snapshots:
       '@typescript-eslint/types': 8.29.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-react-swc@3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10))':
+  '@vitejs/plugin-react-swc@3.8.1(@swc/helpers@0.5.15)(vite@6.2.5(@types/node@22.13.10)(terser@5.39.0))':
     dependencies:
       '@swc/core': 1.11.16(@swc/helpers@0.5.15)
       vite: 6.2.5(@types/node@22.13.10)(terser@5.39.0)
@@ -8385,6 +8424,11 @@ snapshots:
 
   react-refresh@0.16.0: {}
 
+  react-simplikit@0.0.29(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
   react@19.1.0: {}
 
   readable-stream@2.3.8:
@@ -9340,3 +9384,8 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
+
+  zustand@5.0.3(@types/react@19.0.12)(react@19.1.0):
+    optionalDependencies:
+      '@types/react': 19.0.12
+      react: 19.1.0
