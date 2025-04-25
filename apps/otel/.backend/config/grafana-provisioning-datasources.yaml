@@ -27,3 +27,11 @@ datasources:
       implementation: "cortex"
     secureJsonData:
       httpHeaderValue1: "demo"
+  - name: Tempo
+    type: tempo
+    access: proxy
+    orgId: 1
+    url: http://tempo:3200
+    version: 1
+    editable: true
+    isDefault: false

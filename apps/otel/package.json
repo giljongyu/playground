@@ -6,8 +6,8 @@
   "scripts": {
     "dev:otelfe": "vite",
     "dev:otelbe": "pnpm docker:restart",
-    "docker:up": "cd .backend && docker-compose up",
-    "docker:down": "cd .backend && docker-compose down",
+    "docker:up": "cd .backend && docker compose up",
+    "docker:down": "cd .backend && docker compose down -v",
     "docker:restart": "pnpm docker:down && pnpm docker:up",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
