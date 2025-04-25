@@ -1,0 +1,37 @@
+{
+  "$schema": "https://app.cursor.sh/config.schema.json",
+  "model": "gpt-4o",
+  "workspaceContextSize": "large",
+  "enableInlineChat": true,
+  "autoCompleteWithAI": true,
+  "explainCodeWithAI": true,
+  "pnpmWorkspace": true,
+  "turboRepo": {
+    "enabled": true,
+    "pipelineGlobs": ["apps/**", "packages/**"]
+  },
+  "indexing": {
+    "include": ["apps/**", "packages/**"],
+    "exclude": [
+      "node_modules/**",
+      "target/**",
+      "build/**",
+      "dist/**",
+      "android/.gradle/**",
+      "ios/Pods/**",
+      ".next/**",
+      "out/**",
+      ".turbo/**"
+    ]
+  },
+  "languageFeatures": {
+    "typescript": {
+      "enabled": true,
+      "workspaceGlobs": ["apps/**", "packages/**"]
+    },
+    "javascript": {
+      "enabled": true,
+      "workspaceGlobs": ["apps/**", "packages/**"]
+    }
+  }
+}

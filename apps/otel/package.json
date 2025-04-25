@@ -1,0 +1,49 @@
+{
+  "name": "otel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:otelfe": "vite",
+    "dev:otelbe": "pnpm docker:restart",
+    "docker:up": "cd .backend && docker compose up",
+    "docker:down": "cd .backend && docker compose down -v",
+    "docker:restart": "pnpm docker:down && pnpm docker:up",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/context-async-hooks": "^2.0.0",
+    "@opentelemetry/core": "^2.0.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.200.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.200.0",
+    "@opentelemetry/instrumentation": "^0.200.0",
+    "@opentelemetry/instrumentation-fetch": "^0.200.0",
+    "@opentelemetry/resources": "^2.0.0",
+    "@opentelemetry/sdk-metrics": "^2.0.0",
+    "@opentelemetry/sdk-trace-base": "^2.0.0",
+    "@opentelemetry/sdk-trace-web": "^2.0.0",
+    "@opentelemetry/semantic-conventions": "^1.32.0",
+    "@suspensive/react": "^2.18.12",
+    "es-toolkit": "^1.35.0",
+    "overlay-kit": "^1.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-simplikit": "^0.0.30"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.3.1"
+  }
+}

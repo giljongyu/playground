@@ -16,6 +16,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "dev:otelbe": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:otelfe": {
+      "cache": false,
+      "persistent": true
     }
   }
 }
